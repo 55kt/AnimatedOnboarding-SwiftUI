@@ -9,27 +9,22 @@ import SwiftUI
 
 struct AgreementSheetView: View {
     let tint: Color
+    @Binding var hasAgreed: Bool
     let onAccept: () -> Void
     @Environment(\.dismiss) private var dismiss
-    @AppStorage("hasAgreedToTerms") private var hasAgreed: Bool = false
     @State private var agreed: Bool = false
     
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading, spacing: 16) {
-                Text("User Agreement").font(.title2).bold()
                 
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("• Public data: nickname, amounts, and timestamps may appear on the leaderboard.")
-                        Text("• No gambling or prizes. This is a status-based leaderboard experience.")
-                        Text("• We store minimal data and respect your privacy.")
-                        Text("• By continuing, you agree to our Terms of Use and Privacy Policy.")
-                    }
+                    rulesList
                     .font(.callout)
                     .foregroundStyle(.secondary)
                     .padding(.top, 4)
                 }
+                .scrollIndicators(.hidden)
                 
                 Toggle(isOn: $agreed) {
                     Text("I have read and agree to the Terms and Privacy Policy.")
@@ -64,13 +59,28 @@ struct AgreementSheetView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button { dismiss() } label: { Image(systemName: "xmark") }
+                        .tint(tint)
                 }
             }
+            .navigationTitle("User Agreement")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .presentationDetents([.medium, .large])
     }
 }
 
 #Preview {
-    AgreementSheetView(tint: .orange) {}
+    AgreementSheetView(tint: .orange, hasAgreed: .constant(true)) {}
+}
+
+private var rulesList: some View {
+    VStack(alignment: .leading, spacing: 12) {
+        Text("• Public data: nickname, amounts, and timestamps may appear on the leaderboard.")
+        Text("• No gambling or prizes. This is a status-based leaderboard experience.")
+        Text("• We store minimal data and respect your privacy.")
+        Text("• By continuing, you agree to our Terms of Use and Privacy Policy.")
+        Text("• Cheating, exploiting bugs, or unfair play may result in removal from the leaderboard.")
+        Text("• Usernames must be appropriate and respectful to all audiences.")
+        Text("• Data is securely stored and never sold to third parties.")
+        Text("• Offensive behavior or harassment will not be tolerated.")
+    }
 }
