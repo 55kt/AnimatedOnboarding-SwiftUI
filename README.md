@@ -19,6 +19,11 @@
 
 ---
 
+## 📽️ Video
+https://github.com/user-attachments/assets/9b8a2219-20d9-4c57-95c3-27a41eb608af
+
+---
+
 ## 🚀 How It Works
 1. **First Launch**  
    - App shows onboarding slides with animated content.  
