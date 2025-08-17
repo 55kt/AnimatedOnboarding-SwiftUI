@@ -11,7 +11,6 @@
 		4B5140052E51AE3C00D1E48C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5140012E51AE3C00D1E48C /* ContentView.swift */; };
 		4B5140062E51AE3C00D1E48C /* OnBoardingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5140022E51AE3C00D1E48C /* OnBoardingApp.swift */; };
 		4B51400A2E51B29D00D1E48C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5140092E51B29D00D1E48C /* OnboardingView.swift */; };
-		4B51400C2E51CE2A00D1E48C /* PagedOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51400B2E51CE2A00D1E48C /* PagedOnboardingView.swift */; };
 		4B51400E2E51D33100D1E48C /* AgreementSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51400D2E51D33100D1E48C /* AgreementSheetView.swift */; };
 		4B5140112E52297400D1E48C /* OnboardingCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5140102E52297400D1E48C /* OnboardingCardModel.swift */; };
 		4B5140152E5229AF00D1E48C /* OnboardingSlideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5140142E5229AF00D1E48C /* OnboardingSlideModel.swift */; };
@@ -26,7 +25,6 @@
 		4B5140012E51AE3C00D1E48C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4B5140022E51AE3C00D1E48C /* OnBoardingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingApp.swift; sourceTree = "<group>"; };
 		4B5140092E51B29D00D1E48C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		4B51400B2E51CE2A00D1E48C /* PagedOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedOnboardingView.swift; sourceTree = "<group>"; };
 		4B51400D2E51D33100D1E48C /* AgreementSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementSheetView.swift; sourceTree = "<group>"; };
 		4B5140102E52297400D1E48C /* OnboardingCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardModel.swift; sourceTree = "<group>"; };
 		4B5140142E5229AF00D1E48C /* OnboardingSlideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlideModel.swift; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				4B5140092E51B29D00D1E48C /* OnboardingView.swift */,
-				4B51400B2E51CE2A00D1E48C /* PagedOnboardingView.swift */,
 				4B51400D2E51D33100D1E48C /* AgreementSheetView.swift */,
 				4B51401B2E522A7C00D1E48C /* CardView.swift */,
 			);
@@ -182,7 +179,6 @@
 				4B51400A2E51B29D00D1E48C /* OnboardingView.swift in Sources */,
 				4B51401C2E522A7C00D1E48C /* CardView.swift in Sources */,
 				4B5140062E51AE3C00D1E48C /* OnBoardingApp.swift in Sources */,
-				4B51400C2E51CE2A00D1E48C /* PagedOnboardingView.swift in Sources */,
 				4B5140182E522A1D00D1E48C /* Array&Extensions.swift in Sources */,
 				4B5140152E5229AF00D1E48C /* OnboardingSlideModel.swift in Sources */,
 				4B51401A2E522A4A00D1E48C /* Views&Extensions.swift in Sources */,
