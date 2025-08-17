@@ -30,9 +30,9 @@
 ---
 
 ## 🛠 Requirements
-iOS 18+
-Xcode 16+
-Swift 5.9+ 
+- iOS 18+  
+- Xcode 16+  
+- Swift 5.9+
 
 ---
 
