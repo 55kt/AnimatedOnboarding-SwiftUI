@@ -1,5 +1,5 @@
 //
-//  AppleOnboardingView.swift
+//  OnboardingView.swift
 //  OnBoarding
 //
 //  Created by Vlad on 17/8/25.
@@ -7,28 +7,7 @@
 
 import SwiftUI
 
-/// Onboarding Card
-struct AppleOnboardingCard: Identifiable {
-    var id: String = UUID().uuidString
-    var symbol: String
-    var title: String
-    var subtitle: String
-}
-
-/// Onboarding Slide
-struct OnboardingSlide {
-    var title: String
-    var cards: [AppleOnboardingCard]
-}
-
-@resultBuilder
-struct OnboardingSlideResultBuilder {
-    static func buildBlock(_ components: OnboardingSlide...) -> [OnboardingSlide] {
-        components
-    }
-}
-
-struct AppleOnboardingView<Icon: View, Footer: View>: View {
+struct OnboardingView<Icon: View, Footer: View>: View {
     var tint: Color
     var slides: [OnboardingSlide]
     var icon: Icon
@@ -65,13 +44,13 @@ struct AppleOnboardingView<Icon: View, Footer: View>: View {
                     VStack(spacing: 25) {
                         icon
                             .frame(maxWidth: .infinity)
-                            .blurSlide(animateIcon[index])
+                            .blurSlide(animateIcon[safe: index] ?? false)
                         
                         Text(slides[index].title)
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .multilineTextAlignment(.center)
-                            .blurSlide(animateTitle[index])
+                            .blurSlide(animateTitle[safe: index] ?? false)
                         
                         ForEach(slides[index].cards.indices, id: \.self) { cardIndex in
                             CardView(card: slides[index].cards[cardIndex], tint: tint)
@@ -116,14 +95,18 @@ struct AppleOnboardingView<Icon: View, Footer: View>: View {
             hasAnimated[newValue] = true
             Task {
                 await delayedAnimation(0.2) {
-                    animateIcon[newValue] = true
+                    if newValue < animateIcon.count {
+                        animateIcon[newValue] = true
+                    }
                 }
                 await delayedAnimation(0.2) {
-                    animateTitle[newValue] = true
+                    if newValue < animateTitle.count {
+                        animateTitle[newValue] = true
+                    }
                 }
                 for cardIndex in slides[newValue].cards.indices {
                     await delayedAnimation(0.2) {
-                        if cardIndex < animateCards[newValue].count {
+                        if newValue < animateCards.count && cardIndex < animateCards[newValue].count {
                             animateCards[newValue][cardIndex] = true
                         }
                     }
@@ -140,14 +123,18 @@ struct AppleOnboardingView<Icon: View, Footer: View>: View {
             hasAnimated[0] = true
             Task {
                 await delayedAnimation(0.2) {
-                    animateIcon[0] = true
+                    if 0 < animateIcon.count {
+                        animateIcon[0] = true
+                    }
                 }
                 await delayedAnimation(0.2) {
-                    animateTitle[0] = true
+                    if 0 < animateTitle.count {
+                        animateTitle[0] = true
+                    }
                 }
                 for cardIndex in slides[0].cards.indices {
                     await delayedAnimation(0.2) {
-                        if cardIndex < animateCards[0].count {
+                        if 0 < animateCards.count && cardIndex < animateCards[0].count {
                             animateCards[0][cardIndex] = true
                         }
                     }
@@ -161,57 +148,11 @@ struct AppleOnboardingView<Icon: View, Footer: View>: View {
         }
     }
     
-    /// Card View
-    @ViewBuilder
-        func CardView(card: AppleOnboardingCard, tint: Color) -> some View {
-            HStack(alignment: .center, spacing: 15) { // Изменили alignment на .center
-                Image(systemName: card.symbol)
-                    .font(.system(size: 50))
-                    .foregroundStyle(tint)
-                    .frame(width: 50, height: 50) // Фиксированная ширина и высота для иконки
-                    // Убрали .offset(y: 7)
-                
-                VStack(alignment: .leading, spacing: 5) {
-                    Text(card.title)
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .lineLimit(1)
-                    
-                    Text(card.subtitle)
-                        .font(.body)
-                        .foregroundStyle(.secondary)
-                        .lineLimit(3)
-                }
-                .frame(maxWidth: .infinity, alignment: .leading) // Растягиваем текст для единообразия
-            }
-            .padding(.vertical, 10) // Добавили вертикальный padding для карточки
-            .padding(.horizontal, 20)
-            .frame(maxWidth: .infinity) // Фиксируем ширину карточки
-        }
-    
     func delayedAnimation(_ delay: Double, action: @escaping () -> ()) async {
         try? await Task.sleep(for: .seconds(delay))
         withAnimation(.smooth) {
             action()
         }
-    }
-}
-
-extension Array {
-    subscript(safe index: Int) -> Element? {
-        indices.contains(index) ? self[index] : nil
-    }
-}
-
-extension View {
-    /// Custom blur slide effect
-    @ViewBuilder
-    func blurSlide(_ show: Bool) -> some View {
-        self
-            .compositingGroup()
-            .blur(radius: show ? 0 : 10)
-            .opacity(show ? 1 : 0)
-            .offset(y: show ? 0 : 100)
     }
 }
 

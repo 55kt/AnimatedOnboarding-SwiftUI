@@ -10,9 +10,14 @@
 		4B5140042E51AE3C00D1E48C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B5140002E51AE3C00D1E48C /* Assets.xcassets */; };
 		4B5140052E51AE3C00D1E48C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5140012E51AE3C00D1E48C /* ContentView.swift */; };
 		4B5140062E51AE3C00D1E48C /* OnBoardingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5140022E51AE3C00D1E48C /* OnBoardingApp.swift */; };
-		4B51400A2E51B29D00D1E48C /* AppleOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5140092E51B29D00D1E48C /* AppleOnboardingView.swift */; };
+		4B51400A2E51B29D00D1E48C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5140092E51B29D00D1E48C /* OnboardingView.swift */; };
 		4B51400C2E51CE2A00D1E48C /* PagedOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51400B2E51CE2A00D1E48C /* PagedOnboardingView.swift */; };
 		4B51400E2E51D33100D1E48C /* AgreementSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51400D2E51D33100D1E48C /* AgreementSheetView.swift */; };
+		4B5140112E52297400D1E48C /* OnboardingCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5140102E52297400D1E48C /* OnboardingCardModel.swift */; };
+		4B5140152E5229AF00D1E48C /* OnboardingSlideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5140142E5229AF00D1E48C /* OnboardingSlideModel.swift */; };
+		4B5140182E522A1D00D1E48C /* Array&Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5140172E522A1D00D1E48C /* Array&Extensions.swift */; };
+		4B51401A2E522A4A00D1E48C /* Views&Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5140192E522A4A00D1E48C /* Views&Extensions.swift */; };
+		4B51401C2E522A7C00D1E48C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51401B2E522A7C00D1E48C /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,9 +25,14 @@
 		4B5140002E51AE3C00D1E48C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B5140012E51AE3C00D1E48C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4B5140022E51AE3C00D1E48C /* OnBoardingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingApp.swift; sourceTree = "<group>"; };
-		4B5140092E51B29D00D1E48C /* AppleOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleOnboardingView.swift; sourceTree = "<group>"; };
+		4B5140092E51B29D00D1E48C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		4B51400B2E51CE2A00D1E48C /* PagedOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedOnboardingView.swift; sourceTree = "<group>"; };
 		4B51400D2E51D33100D1E48C /* AgreementSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementSheetView.swift; sourceTree = "<group>"; };
+		4B5140102E52297400D1E48C /* OnboardingCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardModel.swift; sourceTree = "<group>"; };
+		4B5140142E5229AF00D1E48C /* OnboardingSlideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlideModel.swift; sourceTree = "<group>"; };
+		4B5140172E522A1D00D1E48C /* Array&Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array&Extensions.swift"; sourceTree = "<group>"; };
+		4B5140192E522A4A00D1E48C /* Views&Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views&Extensions.swift"; sourceTree = "<group>"; };
+		4B51401B2E522A7C00D1E48C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,25 +62,46 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4B513FFF2E51AE3C00D1E48C /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				4B5140092E51B29D00D1E48C /* AppleOnboardingView.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		4B5140032E51AE3C00D1E48C /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				4B513FFF2E51AE3C00D1E48C /* Helpers */,
-				4B5140002E51AE3C00D1E48C /* Assets.xcassets */,
-				4B5140012E51AE3C00D1E48C /* ContentView.swift */,
 				4B5140022E51AE3C00D1E48C /* OnBoardingApp.swift */,
-				4B51400B2E51CE2A00D1E48C /* PagedOnboardingView.swift */,
-				4B51400D2E51D33100D1E48C /* AgreementSheetView.swift */,
+				4B5140012E51AE3C00D1E48C /* ContentView.swift */,
+				4B51401D2E522B6200D1E48C /* Views */,
+				4B51400F2E52292F00D1E48C /* Models */,
+				4B5140162E5229F100D1E48C /* Extensions */,
+				4B5140002E51AE3C00D1E48C /* Assets.xcassets */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		4B51400F2E52292F00D1E48C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B5140102E52297400D1E48C /* OnboardingCardModel.swift */,
+				4B5140142E5229AF00D1E48C /* OnboardingSlideModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4B5140162E5229F100D1E48C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4B5140172E522A1D00D1E48C /* Array&Extensions.swift */,
+				4B5140192E522A4A00D1E48C /* Views&Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4B51401D2E522B6200D1E48C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B5140092E51B29D00D1E48C /* OnboardingView.swift */,
+				4B51400B2E51CE2A00D1E48C /* PagedOnboardingView.swift */,
+				4B51400D2E51D33100D1E48C /* AgreementSheetView.swift */,
+				4B51401B2E522A7C00D1E48C /* CardView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,11 +176,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B5140112E52297400D1E48C /* OnboardingCardModel.swift in Sources */,
 				4B5140052E51AE3C00D1E48C /* ContentView.swift in Sources */,
 				4B51400E2E51D33100D1E48C /* AgreementSheetView.swift in Sources */,
-				4B51400A2E51B29D00D1E48C /* AppleOnboardingView.swift in Sources */,
+				4B51400A2E51B29D00D1E48C /* OnboardingView.swift in Sources */,
+				4B51401C2E522A7C00D1E48C /* CardView.swift in Sources */,
 				4B5140062E51AE3C00D1E48C /* OnBoardingApp.swift in Sources */,
 				4B51400C2E51CE2A00D1E48C /* PagedOnboardingView.swift in Sources */,
+				4B5140182E522A1D00D1E48C /* Array&Extensions.swift in Sources */,
+				4B5140152E5229AF00D1E48C /* OnboardingSlideModel.swift in Sources */,
+				4B51401A2E522A4A00D1E48C /* Views&Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +328,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,9 +336,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = volossoftwarellc.OnBoarding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,6 +361,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -327,9 +369,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = volossoftwarellc.OnBoarding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

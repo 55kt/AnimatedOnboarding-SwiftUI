@@ -19,23 +19,23 @@ struct ContentView: View {
                     .font(.title3)
             }
         } else {
-            AppleOnboardingView(
+            OnboardingView(
                 tint: .orange,
                 slides: [
                     OnboardingSlide(
                         title: "Get Started",
                         cards: [
-                            AppleOnboardingCard(
+                            OnboardingCard(
                                 symbol: "list.bullet.rectangle.fill",
                                 title: "Track Your Progress",
                                 subtitle: "Each tap moves you closer to the top of the leaderboard"
                             ),
-                            AppleOnboardingCard(
+                            OnboardingCard(
                                 symbol: "person.crop.circle.badge.checkmark",
                                 title: "Secure Profile",
                                 subtitle: "Sign in securely with Apple and keep your identity private"
                             ),
-                            AppleOnboardingCard(
+                            OnboardingCard(
                                 symbol: "person.2.fill",
                                 title: "Connect & Compete",
                                 subtitle: "Join a community of players and compete globally"
@@ -45,17 +45,17 @@ struct ContentView: View {
                     OnboardingSlide(
                         title: "Join the Competition",
                         cards: [
-                            AppleOnboardingCard(
+                            OnboardingCard(
                                 symbol: "lasso",
                                 title: "Climb the Ranks",
                                 subtitle: "Challenge others and aim for the #1 position every season"
                             ),
-                            AppleOnboardingCard(
+                            OnboardingCard(
                                 symbol: "person.2.fill",
                                 title: "Connect & Compete",
                                 subtitle: "Join a community of players and compete globally"
                             ),
-                            AppleOnboardingCard(
+                            OnboardingCard(
                                 symbol: "star.fill",
                                 title: "Achieve Greatness",
                                 subtitle: "Show the world your skills and dominate the leaderboard"
@@ -65,12 +65,12 @@ struct ContentView: View {
                     OnboardingSlide(
                         title: "Be the Best",
                         cards: [
-                            AppleOnboardingCard(
+                            OnboardingCard(
                                 symbol: "star.fill",
                                 title: "Achieve Greatness",
                                 subtitle: "Show the world your skills and dominate the leaderboard"
                             ),
-                            AppleOnboardingCard(
+                            OnboardingCard(
                                 symbol: "trophy.fill",
                                 title: "Earn Rewards",
                                 subtitle: "Unlock achievements as you climb higher"
