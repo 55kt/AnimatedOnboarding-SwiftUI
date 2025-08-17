@@ -6,17 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4B5140042E51AE3C00D1E48C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B5140002E51AE3C00D1E48C /* Assets.xcassets */; };
+		4B5140052E51AE3C00D1E48C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5140012E51AE3C00D1E48C /* ContentView.swift */; };
+		4B5140062E51AE3C00D1E48C /* OnBoardingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5140022E51AE3C00D1E48C /* OnBoardingApp.swift */; };
+		4B51400A2E51B29D00D1E48C /* AppleOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5140092E51B29D00D1E48C /* AppleOnboardingView.swift */; };
+		4B51400C2E51CE2A00D1E48C /* PagedOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51400B2E51CE2A00D1E48C /* PagedOnboardingView.swift */; };
+		4B51400E2E51D33100D1E48C /* AgreementSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51400D2E51D33100D1E48C /* AgreementSheetView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		4B513FF02E51ADFB00D1E48C /* OnBoarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnBoarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B5140002E51AE3C00D1E48C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B5140012E51AE3C00D1E48C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4B5140022E51AE3C00D1E48C /* OnBoardingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingApp.swift; sourceTree = "<group>"; };
+		4B5140092E51B29D00D1E48C /* AppleOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleOnboardingView.swift; sourceTree = "<group>"; };
+		4B51400B2E51CE2A00D1E48C /* PagedOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedOnboardingView.swift; sourceTree = "<group>"; };
+		4B51400D2E51D33100D1E48C /* AgreementSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		4B513FF22E51ADFB00D1E48C /* OnBoarding */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = OnBoarding;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4B513FED2E51ADFB00D1E48C /* Frameworks */ = {
@@ -32,7 +39,7 @@
 		4B513FE72E51ADFB00D1E48C = {
 			isa = PBXGroup;
 			children = (
-				4B513FF22E51ADFB00D1E48C /* OnBoarding */,
+				4B5140032E51AE3C00D1E48C /* OnBoarding */,
 				4B513FF12E51ADFB00D1E48C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +50,27 @@
 				4B513FF02E51ADFB00D1E48C /* OnBoarding.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4B513FFF2E51AE3C00D1E48C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4B5140092E51B29D00D1E48C /* AppleOnboardingView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4B5140032E51AE3C00D1E48C /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				4B513FFF2E51AE3C00D1E48C /* Helpers */,
+				4B5140002E51AE3C00D1E48C /* Assets.xcassets */,
+				4B5140012E51AE3C00D1E48C /* ContentView.swift */,
+				4B5140022E51AE3C00D1E48C /* OnBoardingApp.swift */,
+				4B51400B2E51CE2A00D1E48C /* PagedOnboardingView.swift */,
+				4B51400D2E51D33100D1E48C /* AgreementSheetView.swift */,
+			);
+			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +87,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				4B513FF22E51ADFB00D1E48C /* OnBoarding */,
 			);
 			name = OnBoarding;
 			packageProductDependencies = (
@@ -109,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B5140042E51AE3C00D1E48C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +145,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B5140052E51AE3C00D1E48C /* ContentView.swift in Sources */,
+				4B51400E2E51D33100D1E48C /* AgreementSheetView.swift in Sources */,
+				4B51400A2E51B29D00D1E48C /* AppleOnboardingView.swift in Sources */,
+				4B5140062E51AE3C00D1E48C /* OnBoardingApp.swift in Sources */,
+				4B51400C2E51CE2A00D1E48C /* PagedOnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
